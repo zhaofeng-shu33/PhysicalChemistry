@@ -1,8 +1,12 @@
+// build and run step (tested on Ubuntu-16.04)
+// mkdir -p build && g++ main.cpp -lGL -lGLU -lglut -o build/main
+// cd build && ./main
 #include<iostream>
 #include<GL/gl.h>
 #include<GL/glu.h>
 #include<GL/glut.h>
 #include<stdio.h>
+#include<cstring>
 #include<stdlib.h>
 #include<cmath>
 const double Pi=3.14159, R = 8.314;
