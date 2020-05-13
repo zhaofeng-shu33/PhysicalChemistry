@@ -1,0 +1,66 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Thursday, September 17, 2015 22:03:22}
+%TCIDATA{LastRevised=Sunday, November 22, 2015 22:19:40}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Using Van der Waals Equation to calculate the Boyle temperature of the
+hydrogen gas.
+
+From pages 9-10 of the textbook, the Boyle temperature $T_{B}$ satisfies $%
+\left[ \frac{\partial (pV_{m})}{\partial p}\right] _{T_{B}}\rightarrow 0$ as 
+$p\rightarrow 0.$
+
+From the Van der Waals Equation: $(p-\frac{a}{V_{m}^{2}})(V_{m}-b)=RT,$ keep 
+$T=const$ and let $y=PV_{m},$then \qquad\ substitute $V_{m}=\frac{y}{P}$
+into the equation to cancel out $V_{m},$ after rearranging we can get $%
+y^{3}-RTy^{2}-abp^{2}=p(by^{2}-ay).y$ can be treated as a function with
+single variable $p$.Take the derivative about $p$ on both sides of the above
+equation, and then let $p\rightarrow 0,$ from the condition we have $%
+y^{\prime }\rightarrow 0$ and the left hand tends to zero. We therefore get $%
+by^{2}-ay=0$ (1) If we take the limit $p\rightarrow 0$ directly in the
+derived equation,we can get $y^{3}-RTy^{2}=0$ (2) From (1)(2) we can solve
+out $\underset{p\rightarrow 0}{\lim }y=\frac{a}{b}=RT$ (3) since $\underset{%
+p\rightarrow 0}{\lim }y=0$ is impossible, because that means $\underset{%
+p\rightarrow 0}{\lim }V_{m}=\infty .$At last, let the const $T$ be the Boyle
+temperature $T_{B},$ it follows from (3) that $T_{B}=\frac{a}{bR}.$For
+hydrogen gas substitute $a=0.0274,b=2.66\times 10^{-5},R=8.314$ (the unit is
+omitted here for convenience), we get $T_{B}\approx 123.90K.$
+
+\end{document}
