@@ -1,0 +1,551 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19919,        542]
+NotebookOptionsPosition[     19523,        525]
+NotebookOutlinePosition[     19899,        541]
+CellTagsIndexPosition[     19856,        538]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ GraphicsBox[{{
+    {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+     Opacity[1.]}], 
+     RectangleBox[{0.41141378139850615`, 0.8333333333333328}, \
+{0.7247708757637473, 0.6789743154559844}]}, 
+    InsetBox["", {0.5946981196121378, 0.7512262656510263}, {
+     Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}]}, 
+   InsetBox["", {0.609633625382674, 0.44165396422536496`}, {
+    Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+    0.}, {0., 1.}},
+    Alignment->{Left, Top}], 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    GrayLevel[0.], Opacity[1.]}], FaceForm[{Hue[0.25, 0.2972972972972973, 1.],
+     Opacity[1.]}], 
+    ArrowBox[{{0.7562797012898843, 0.751686364342469}, {0.9151391717583158, 
+     0.7516863643424688}}]}, {
+    {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+     Opacity[1.]}], 
+     RectangleBox[{0.9151391717583158, 0.8288658732811427}, \
+{1.2284962661235568`, 0.6745068554037944}]}, 
+    InsetBox["", {1.0984235099719473`, 0.7467588055988363}, {
+     Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}]}, 
+   StyleBox[InsetBox[
+     RowBox[{
+      StyleBox[
+       RowBox[{Cell[TextData[{
+         "1 mol ",
+         Cell[BoxData[
+          FormBox[
+           RowBox[{
+            SubscriptBox["C", "6"], 
+            SubscriptBox["H", "6"]}], TraditionalForm]]]
+        }],
+         GeneratedCell->False,
+         CellAutoOverwrite->False,
+         CellBaseline->Baseline,
+         TextAlignment->Left], " ", 
+        RowBox[{"(", "l", ")"}]}],
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["            ",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      RowBox[{
+       RowBox[{
+        StyleBox["-",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        SuperscriptBox[
+         StyleBox["5",
+          TextAlignment->Center,
+          Background->GrayLevel[1.]], "\[Degree]"]}], "C"}], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[
+        1.]]}], {0.44686319447058676`, 0.7721978128708094}, {
+     Left, Baseline}, {0.2607693977120239, 0.09861886629377938}, {{1., 0.}, {
+     0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->18], 
+   StyleBox[InsetBox[
+     RowBox[{
+      StyleBox[
+       RowBox[{Cell[TextData[{
+         "1 mol ",
+         Cell[BoxData[
+          FormBox[
+           RowBox[{
+            SubscriptBox["C", "6"], 
+            SubscriptBox["H", "6"]}], TraditionalForm]]]
+        }],
+         GeneratedCell->False,
+         CellAutoOverwrite->False,
+         CellBaseline->Baseline,
+         TextAlignment->Left], " ", 
+        RowBox[{"(", "s", ")"}]}],
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["            ",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      RowBox[{
+       RowBox[{
+        StyleBox["-",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        SuperscriptBox[
+         StyleBox["5",
+          TextAlignment->Center,
+          Background->GrayLevel[1.]], "\[Degree]"]}], "C"}], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      StyleBox["\[IndentingNewLine]",
+       TextAlignment->Center,
+       Background->GrayLevel[
+        1.]]}], {0.9414330200849242, 0.7728766994967421}, {
+     Left, Baseline}, {0.2607693977120239, 0.09861886629377938}, {{1., 0.}, {
+     0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->18], {{
+     {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+      Opacity[1.]}], 
+      RectangleBox[{0.41141378139850604`, 0.5537579203439702}, \
+{0.7247708757637472, 0.3993989024666218}]}, 
+     InsetBox["", {0.5946981196121377, 0.47165085266166373`}, {
+      Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+      0.}, {0., 1.}},
+      Alignment->{Left, Top}]}, 
+    StyleBox[InsetBox[
+      RowBox[{
+       StyleBox[
+        RowBox[{Cell[TextData[{
+          "1 mol ",
+          Cell[BoxData[
+           FormBox[
+            RowBox[{
+             SubscriptBox["C", "6"], 
+             SubscriptBox["H", "6"]}], TraditionalForm]]]
+         }],
+          GeneratedCell->False,
+          CellAutoOverwrite->False,
+          CellBaseline->Baseline,
+          TextAlignment->Left], " ", 
+         RowBox[{"(", "g", ")"}]}],
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["       ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          StyleBox["-",
+           TextAlignment->Center,
+           Background->GrayLevel[1.]], 
+          SuperscriptBox[
+           StyleBox["5",
+            TextAlignment->Center,
+            Background->GrayLevel[1.]], "\[Degree]"]}], "C"}], ",", "pPa"}], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[
+         1.]]}], {0.44686319447058664`, 0.49262239988144674`}, {
+      Left, Baseline}, {0.2607693977120239, 0.09861886629377938}, {{1., 0.}, {
+      0., 1.}},
+      Alignment->{Left, Top}],
+     FontSize->18]}, {
+    InsetBox["", {1.1133590157424833`, 0.4409750775994329}, {
+     Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}], {{
+      {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+       Opacity[1.]}], 
+       RectangleBox[{0.9151391717583155, 0.5530790337180381}, \
+{1.2284962661235568`, 0.3987200158406897}]}, 
+      InsetBox["", {1.0984235099719473`, 0.47097196603573166`}, {
+       Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+       0.}, {0., 1.}},
+       Alignment->{Left, Top}]}, 
+     StyleBox[InsetBox[
+       RowBox[{
+        StyleBox[
+         RowBox[{Cell[TextData[{
+           "1 mol ",
+           Cell[BoxData[
+            FormBox[
+             RowBox[{
+              SubscriptBox["C", "6"], 
+              SubscriptBox["H", "6"]}], TraditionalForm]]]
+          }],
+           GeneratedCell->False,
+           CellAutoOverwrite->False,
+           CellBaseline->Baseline,
+           TextAlignment->Left], " ", 
+          RowBox[{"(", "g", ")"}]}],
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        StyleBox["\[IndentingNewLine]",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        StyleBox["  ",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           StyleBox["-",
+            TextAlignment->Center,
+            Background->GrayLevel[1.]], 
+           SuperscriptBox[
+            StyleBox["5",
+             TextAlignment->Center,
+             Background->GrayLevel[1.]], "\[Degree]"]}], "C"}], ",", 
+         RowBox[{"2280", "Pa"}]}], 
+        StyleBox["\[IndentingNewLine]",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        StyleBox["\[IndentingNewLine]",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        StyleBox["\[IndentingNewLine]",
+         TextAlignment->Center,
+         Background->GrayLevel[1.]], 
+        StyleBox["\[IndentingNewLine]",
+         TextAlignment->Center,
+         Background->GrayLevel[
+          1.]]}], {0.9505885848303961, 0.49194351325551466`}, {
+       Left, Baseline}, {0.2607693977120239, 0.09861886629377938}, {{1., 
+       0.}, {0., 1.}},
+       Alignment->{Left, Top}],
+      FontSize->18]}}, 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    GrayLevel[0.], Opacity[1.]}], FaceForm[{Hue[0.25, 0.2972972972972973, 1.],
+     Opacity[1.]}], 
+    ArrowBox[{{0.5772478933265985, 0.6745068554037946}, {0.5772478933265985, 
+     0.5530790337180386}}]}, 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    GrayLevel[0.], Opacity[1.]}], FaceForm[{Hue[0.25, 0.2972972972972973, 1.],
+     Opacity[1.]}], 
+    ArrowBox[{{1.080973283686408, 0.5537579203439704}, {1.080973283686408, 
+     0.6745068554037951}}]}, 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    RGBColor[0., 0., 0.], Opacity[1.], AbsoluteThickness[1]}], FaceForm[{Hue[
+    0.25, 0.2972972972972973, 1.], Opacity[1.]}], 
+    ArrowBox[{{0.7247708757637472, 0.4707531781012405}, {0.9151391717583155, 
+     0.47075317810124095`}}]}, InsetBox[
+    StyleBox[Cell["I",
+      GeneratedCell->False,
+      CellAutoOverwrite->False,
+      CellBaseline->Baseline,
+      TextAlignment->Left],
+     Background->GrayLevel[1.]], {0.5975880901246711, 0.6271186440677965}, {
+    Left, Baseline},
+    Alignment->{Left, Top}], InsetBox[
+    StyleBox[Cell["II",
+      GeneratedCell->False,
+      CellAutoOverwrite->False,
+      CellBaseline->Baseline,
+      TextAlignment->Left],
+     Background->GrayLevel[1.]], {0.7937853107344638, 0.48933354795663553`}, {
+    Left, Baseline},
+    Alignment->{Left, Top}], InsetBox[
+    StyleBox[Cell["III",
+      GeneratedCell->False,
+      CellAutoOverwrite->False,
+      CellBaseline->Baseline,
+      TextAlignment->Left],
+     Background->GrayLevel[1.]], {1.0353107344632773`, 0.6334745762711863}, {
+    Left, Baseline},
+    Alignment->{Left, Top}]},
+  ContentSelectable->True,
+  ImagePadding->{{0., 0.}, {0., 0.}},
+  ImageSize->{637.3333333333329, 472.},
+  PlotRange->{{0., 1.3333333333333335`}, {0., 1.}},
+  PlotRangePadding->Automatic]], "Input",
+ CellChangeTimes->{{3.6551150533032117`*^9, 3.655115062828827*^9}, {
+   3.65511510021609*^9, 3.6551153472561016`*^9}, {3.655115389683771*^9, 
+   3.6551155069579573`*^9}, {3.655115581893677*^9, 3.6551155836564803`*^9}, {
+   3.6551162510651646`*^9, 3.6551162868992233`*^9}, 3.6551196458436794`*^9, {
+   3.655268410870087*^9, 3.6552685169190736`*^9}, {3.655268558675546*^9, 
+   3.6552687662339106`*^9}, {3.6552688951033335`*^9, 3.655268909186558*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.655119807883154*^9, 3.655119818787573*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6557265770655546`*^9, 3.6557265793846745`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{
+    {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+     Opacity[1.]}], 
+     RectangleBox[{0.25812542430414154`, 0.717996847614163}, \
+{0.5714825186693827, 0.5709754512642238}]}, 
+    InsetBox["", {0.4414097625177732, 0.635199591064015}, {
+     Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}]}, 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    GrayLevel[0.], Opacity[1.]}], FaceForm[{Hue[0.25, 0.2972972972972973, 1.],
+     Opacity[1.]}], 
+    ArrowBox[{{0.6029913441955197, 0.6356596897554577}, {0.7618508146639512, 
+     0.6356596897554575}}]}, {
+    {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+     Opacity[1.]}], 
+     RectangleBox[{0.7618508146639512, 0.7128391986941314}, \
+{1.0752079090291922`, 0.5584801808167831}]}, 
+    InsetBox["", {0.9451351528775827, 0.630732131011825}, {
+     Left, Baseline}, {0.00577994102506689, 0.017869840208761503`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}]}, 
+   StyleBox[InsetBox[
+     RowBox[{
+      StyleBox["      ",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         StyleBox["C",
+          TextAlignment->Center,
+          Background->GrayLevel[1.]], "6"], 
+        RowBox[{
+         SubscriptBox["H", "6"], "(", "l", ")"}]}], 
+       StyleBox[" ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["    ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       RowBox[{"101325", "Pa"}], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[
+         1.]]}]}], {0.29357483737622214`, 0.6561711382837985}, {
+     Left, Baseline}, {0.2607693977120239, 0.11558084932290628`}, {{1., 0.}, {
+     0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->18], {
+    InsetBox["", {0.7089975070810232, 0.36442556391431424`}, {
+     Left, Baseline}, {0.005779941025066865, 0.017869840208761513`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}], {
+     {EdgeForm[Opacity[1.]], FaceForm[{Hue[0.25, 0.2972972972972973, 1.], 
+      Opacity[1.]}], 
+      RectangleBox[{0.5107776630968555, 0.4765295200329194}, \
+{0.8241347574620967, 0.32217050215557097`}]}, 
+     InsetBox["", {0.6940620013104872, 0.39442245235061296`}, {
+      Left, Baseline}, {0.005779941025066865, 0.017869840208761513`}, {{1., 
+      0.}, {0., 1.}},
+      Alignment->{Left, Top}]}}, 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    GrayLevel[0.], Opacity[1.]}], FaceForm[{Hue[0.25, 0.2972972972972973, 1.],
+     Opacity[1.]}], 
+    ArrowBox[{{0.7724545892017249, 0.48149787995254}, {0.8758149257224684, 
+     0.5439234047993556}}]}, InsetBox[
+    StyleBox[Cell["III",
+      GeneratedCell->False,
+      CellAutoOverwrite->False,
+      CellBaseline->Baseline,
+      TextAlignment->Left],
+     Background->GrayLevel[1.]], {0.8820223773689126, 0.517447901684175}, {
+    Left, Baseline},
+    Alignment->{Left, Top}], InsetBox[
+    StyleBox[Cell["I",
+      GeneratedCell->False,
+      CellAutoOverwrite->False,
+      CellBaseline->Baseline,
+      TextAlignment->Left],
+     Background->GrayLevel[1.]], {0.6565519995116589, 0.6697247706422018}, {
+    Left, Baseline},
+    Alignment->{Left, Top}], 
+   InsetBox["", {0.49059852943899745`, 0.6578521595091887}, {Left, Baseline},
+    Alignment->{Left, Top}], 
+   {AbsoluteThickness[1], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[{
+    RGBColor[0., 0., 0.], Opacity[1.], AbsoluteThickness[1]}], FaceForm[{Hue[
+    0.25, 0.2972972972972973, 1.], Opacity[1.]}], 
+    ArrowBox[{{0.3911160839662281, 0.5439234047993557}, {0.5462270761689362, 
+     0.48149787995254}}]}, 
+   InsetBox["", {0.49059852943899745`, 0.528367071750981}, {Left, Baseline},
+    Alignment->{Left, Top}], InsetBox[
+    StyleBox[
+     TagBox["II",
+      "RawBoxes"],
+     Background->GrayLevel[1.]], {0.5060404037886285, 0.5149448370443376}, {
+    Left, Baseline},
+    Alignment->{Left, Top}], 
+   StyleBox[InsetBox[
+     RowBox[{
+      StyleBox["      ",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         StyleBox["C",
+          TextAlignment->Center,
+          Background->GrayLevel[1.]], "6"], 
+        RowBox[{
+         SubscriptBox["H", "6"], "(", "g", ")"}]}], 
+       StyleBox[" ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["    ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       RowBox[{"101325", "Pa"}], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[
+         1.]]}]}], {0.5365308300240075, 0.415393999570396}, {
+     Left, Baseline}, {0.2607693977120239, 0.11558084932290628`}, {{1., 0.}, {
+     0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->18], 
+   StyleBox[InsetBox[
+     RowBox[{
+      StyleBox["      ",
+       TextAlignment->Center,
+       Background->GrayLevel[1.]], 
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         StyleBox["C",
+          TextAlignment->Center,
+          Background->GrayLevel[1.]], "6"], 
+        RowBox[{
+         SubscriptBox["H", "6"], "(", "g", ")"}]}], 
+       StyleBox[" ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["            ",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], "P", 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[1.]], 
+       StyleBox["\[IndentingNewLine]",
+        TextAlignment->Center,
+        Background->GrayLevel[
+         1.]]}]}], {0.78814466299056, 0.6561711382837984}, {
+     Left, Baseline}, {0.2607693977120239, 0.11558084932290628`}, {{1., 0.}, {
+     0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->18]},
+  ImagePadding->{{0., 0.666667}, {0.666667, 0.}},
+  PlotRange->{{0.2411028725390362, 1.0922304607942974`}, {0.2663516915591774, 
+   0.7336483084408225}},
+  PlotRangePadding->Automatic]], "Input",
+ CellChangeTimes->{{3.656314637713581*^9, 3.656314646761597*^9}, {
+  3.656314692469678*^9, 3.656314703686097*^9}, {3.656314763949003*^9, 
+  3.656315050618507*^9}}]
+},
+WindowSize->{766, 505},
+WindowMargins->{{256, Automatic}, {55, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (32-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 11266, 299, 730, "Input"],
+Cell[11826, 321, 92, 1, 45, "Input"],
+Cell[11921, 324, 96, 1, 45, "Input"],
+Cell[12020, 327, 7499, 196, 319, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

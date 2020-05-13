@@ -1,0 +1,584 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19012,        575]
+NotebookOptionsPosition[     16688,        489]
+NotebookOutlinePosition[     17035,        504]
+CellTagsIndexPosition[     16992,        501]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"entropy", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{"y", ",", "\"\<mol\>\""}], "]"}], "*", 
+     RowBox[{"ThermodynamicData", "[", 
+      RowBox[{"x", ",", "\"\<Entropy\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Temperature\>\"", "\[Rule]", 
+         RowBox[{"Quantity", "[", 
+          RowBox[{"298.15", ",", "\"\<Kelvins\>\""}], "]"}]}], "}"}]}], "]"}],
+      "*", 
+     RowBox[{"ChemicalData", "[", 
+      RowBox[{"x", ",", "\"\<MolarMass\>\""}], "]"}]}], "//", 
+    "UnitSimplify"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.655777138915801*^9, 3.655777139290202*^9}, {
+  3.6557772141399326`*^9, 3.655777284373254*^9}, {3.655777390670237*^9, 
+  3.655777396957048*^9}, {3.655789297066499*^9, 3.6557893486665716`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"entropy", "[", 
+  RowBox[{"\"\<Oxygen\>\"", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6557772381679745`*^9, 3.655777242932782*^9}, {
+  3.6557774025682573`*^9, 3.655777403566659*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"205.0215284200828`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"K\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kelvin"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Kelvins\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.6557772442027845`*^9, 3.6557774051578617`*^9, 
+  3.655789377006611*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"entropy", "[", 
+  RowBox[{"\"\<Hydrogen\>\"", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6557774142058773`*^9, 3.655777420333088*^9}, {
+  3.655777480458392*^9, 3.6557774847639995`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"107.5963868729107`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"K\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kelvin"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Kelvins\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.6557774855440006`*^9, 3.6557888625706263`*^9, 
+  3.6557900658599167`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"entropy", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6557774881180053`*^9, 3.6557774944984164`*^9}, {
+  3.655777649636156*^9, 3.6557776891714244`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"6.615204359724484`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"K\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kelvin"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Kelvins\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.6557775121824465`*^9, {3.6557776671109853`*^9, 3.6557776897798257`*^9}, 
+   3.655790495525041*^9, 3.655792647538966*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6557772497879934`*^9, 3.6557772525647984`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Quantity", "[", 
+  RowBox[{"1", ",", "\"\<mol\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.6557772859020567`*^9, 3.6557772914868665`*^9}, {
+  3.6557773329961367`*^9, 3.65577733500854*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"1"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: moles"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Moles\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.655777335570141*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6557904810618167`*^9, 3.6557904882866287`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"75.3", "-", "33.6"}], ")"}], "*", 
+   RowBox[{"80", "/", "1000"}]}], "+", "40.6"}]], "Input",
+ CellChangeTimes->{{3.655791480728546*^9, 3.65579149445857*^9}, {
+  3.655791532210636*^9, 3.6557915364538436`*^9}, {3.655791841559573*^9, 
+  3.6557918426307745`*^9}, {3.655791935784137*^9, 3.655791935877737*^9}}],
+
+Cell[BoxData["43.936`"], "Output",
+ CellChangeTimes->{3.655791496299373*^9, 3.6557915369374447`*^9, 
+  3.6557918458279796`*^9, 3.655791937032139*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"2.776", "+", "40.6"}]], "Input",
+ CellChangeTimes->{{3.6557915046297874`*^9, 3.655791507749793*^9}}],
+
+Cell[BoxData["43.376000000000005`"], "Output",
+ CellChangeTimes->{3.655791508264594*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChemicalData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<Phase\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.6557774232814927`*^9, 3.6557774762619843`*^9}, {
+  3.655777524006467*^9, 3.655777568310545*^9}, {3.655777625409313*^9, 
+  3.6557776334277277`*^9}, {3.6557888461706038`*^9, 3.6557888505906096`*^9}, {
+  3.6557904395501466`*^9, 3.655790440501748*^9}, {3.655790765986912*^9, 
+  3.6557907689197173`*^9}, {3.655792720746294*^9, 3.6557927229926977`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Entity", "[", 
+  RowBox[{"\<\"MatterPhase\"\>", ",", "\<\"Liquid\"\>"}], "]"}]], "Output",
+ CellChangeTimes->{{3.6557774515763416`*^9, 3.6557774768703856`*^9}, 
+   3.655777634316929*^9, 3.655788852110612*^9, 3.6557904414221497`*^9, 
+   3.655790769746519*^9, 3.655792724849101*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ThermodynamicData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<MolarEntropy\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.655789022796115*^9, 3.655789051876156*^9}, {
+  3.655789288086487*^9, 3.6557892909764905`*^9}, {3.6557903349847703`*^9, 
+  3.655790337992375*^9}, {3.655790450113364*^9, 3.655790450971366*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"5.340857438969153`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]",
+             "\"K\"", "\[ThinSpace]", "\"mol\"", "\[InvisibleSpace]", 
+            "\")\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kelvin mole"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", 
+        RowBox[{"\"Kelvins\"", " ", "\"Moles\""}]]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.655789036896135*^9, 3.6557903409615803`*^9, 
+  3.655790452702969*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ThermodynamicData", "[", 
+  RowBox[{"\"\<Oxygen\>\"", ",", "\"\<MolarEnthalpy\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.655792810694849*^9, 3.6557928154260564`*^9}, {
+  3.6557928513817186`*^9, 3.655792853706123*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"8524.912580063214`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"mol\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per mole"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Moles\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.6557928171732593`*^9, 3.655792855812126*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ThermodynamicData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<MolarEnthalpy\>\""}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ TemplateBox[{"1513.414036620397`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"mol\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per mole"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Moles\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.6557928436129055`*^9}]
+}, Open  ]],
+
+Cell[BoxData["entropy"], "Input",
+ CellChangeTimes->{{3.6557775086788416`*^9, 3.6557775186400576`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"entropy", "[", 
+   RowBox[{"\"\<Water\>\"", ",", "1"}], "]"}], "-", 
+  RowBox[{"entropy", "[", 
+   RowBox[{"\"\<Hydrogen\>\"", ",", "1"}], "]"}], "-", 
+  RowBox[{"0.5", "*", 
+   RowBox[{"entropy", "[", 
+    RowBox[{"\"\<Oxygen\>\"", ",", "1"}], "]"}]}]}]], "Input"],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"-", "204.0301233178696`"}]},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"K\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kelvin"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Kelvins\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.655788630060301*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"1", ",", "\"\<mol\>\""}], "]"}], "*", 
+   RowBox[{"ThermodynamicData", "[", 
+    RowBox[{"\"\<Water\>\"", ",", "\"\<Entropy\>\""}], "]"}], "*", 
+   RowBox[{"ChemicalData", "[", 
+    RowBox[{"\"\<Water\>\"", ",", "\"\<MolarMass\>\""}], "]"}]}], "//", 
+  "UnitSimplify"}]], "Input",
+ CellChangeTimes->{{3.6557887146604195`*^9, 3.655788726170436*^9}, {
+  3.655788802720543*^9, 3.6557888051705465`*^9}, {3.65579008528835*^9, 
+  3.6557901536640663`*^9}, {3.655792670658207*^9, 3.6557926810790253`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"5.340860996523182`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+            "\"K\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kelvin"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", "\"Kelvins\""]}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.6557887338604465`*^9, 3.655788812290556*^9, 3.655790087534754*^9, 
+   3.655790154444067*^9, {3.6557926739810123`*^9, 3.655792682192227*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"y", ",", "\"\<mol\>\""}], "]"}], "*", 
+   RowBox[{"ThermodynamicData", "[", 
+    RowBox[{"x", ",", "\"\<Entropy\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Temperature\>\"", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"298.15", ",", "\"\<Kelvins\>\""}], "]"}]}], "}"}]}], "]"}], 
+   "*", 
+   RowBox[{"ChemicalData", "[", 
+    RowBox[{"x", ",", "\"\<MolarMass\>\""}], "]"}]}], "//"}]], "Input",
+ CellChangeTimes->{3.655790138637241*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    FractionBox["43936", "293.15"], "\[Equal]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"75.3", "-", "33.6"}], ")"}], "*", 
+      RowBox[{"Log", "[", 
+       FractionBox["298.15", "293.15"], "]"}]}], "+", 
+     FractionBox["43727.5", "298.15"], "+", 
+     RowBox[{"8.314", "*", 
+      RowBox[{"Log", "[", 
+       FractionBox["P", "2339"], "]"}]}]}]}], ",", "P"}], "]"}]], "Input",
+ CellChangeTimes->{{3.655792045257924*^9, 3.655792131141671*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"P", "\[Rule]", "3162.3723614656515`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6557921350756783`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["43727.5", "298.2"], "-", 
+  RowBox[{"8.31", "*", 
+   RowBox[{"Log", "[", 
+    FractionBox["101325", "3160"], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6557921711929398`*^9, 3.6557922016305923`*^9}, {
+  3.6557923682060833`*^9, 3.6557923690484853`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"117.82", "+", "69.94"}]], "Input",
+ CellChangeTimes->{{3.6557925466227922`*^9, 3.6557925640792227`*^9}}],
+
+Cell[BoxData["187.76`"], "Output",
+ CellChangeTimes->{{3.6557925567940097`*^9, 3.6557925651712246`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["40600", "298.2"], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.6557922615330963`*^9, 3.65579226964511*^9}, {
+  3.655792341155636*^9, 3.6557923419824376`*^9}}],
+
+Cell[BoxData["136.15023474178403`"], "Output",
+ CellChangeTimes->{{3.6557922623442974`*^9, 3.6557922702535114`*^9}, 
+   3.655792345196043*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ThermodynamicData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<SolidLiquidPhaseBoundary\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Temperature\>\"", "\[Rule]", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"263.15", ",", "\"\<Kelvins\>\""}], "]"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6571077814950285`*^9, 3.6571078186230936`*^9}, {
+   3.6571078750639925`*^9, 3.6571079476041203`*^9}, {3.657107981190979*^9, 
+   3.657108007539425*^9}, {3.657108044841091*^9, 3.657108045948693*^9}, {
+   3.657108113434411*^9, 3.657108158908491*^9}, {3.657108224787407*^9, 
+   3.6571082280322127`*^9}, 3.6571085914816513`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{"4.749246858432025`*^8"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: pascals"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Pascals\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.657107851897952*^9, 3.6571079535789304`*^9, 3.657108009551829*^9, 
+   3.6571080474774957`*^9, 3.657108079956753*^9, {3.6571081381448545`*^9, 
+   3.6571081607024946`*^9}, 3.657108230153816*^9, 3.657108593369254*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ThermodynamicData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<SolidLiquidPhaseBoundary\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Pressure\>\"", "\[Rule]", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"273.15", ",", "\"\<Kelvins\>\""}], "]"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6571083118667603`*^9, 3.657108316390768*^9}, {
+  3.657108575054822*^9, 3.657108577254426*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"296.46283579956474`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]",
+             "\"kg\"", "\[ThinSpace]", "\"K\"", "\[InvisibleSpace]", 
+            "\")\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: joules per kilogram kelvin"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Joules\"", 
+        RowBox[{"\"Kelvins\"", " ", "\"Kilograms\""}]]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.65710809560358*^9}]
+}, Open  ]]
+},
+WindowSize->{767, 606},
+WindowMargins->{{Automatic, 253}, {-90, Automatic}},
+FrontEndVersion->"10.0 for Microsoft Windows (32-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 857, 21, 92, "Input"],
+Cell[CellGroupData[{
+Cell[1440, 45, 215, 4, 31, "Input"],
+Cell[1658, 51, 651, 16, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2346, 72, 217, 4, 31, "Input"],
+Cell[2566, 78, 653, 16, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3256, 99, 216, 4, 31, "Input"],
+Cell[3475, 105, 703, 17, 31, "Output"]
+}, Open  ]],
+Cell[4193, 125, 96, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[4314, 130, 214, 4, 31, "Input"],
+Cell[4531, 136, 431, 11, 31, "Output"]
+}, Open  ]],
+Cell[4977, 150, 96, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[5098, 155, 371, 8, 31, "Input"],
+Cell[5472, 165, 149, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5658, 172, 124, 2, 31, "Input"],
+Cell[5785, 176, 88, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5910, 182, 482, 7, 31, "Input"],
+Cell[6395, 191, 304, 5, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6736, 201, 338, 5, 31, "Input"],
+Cell[7077, 208, 762, 18, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7876, 231, 245, 4, 31, "Input"],
+Cell[8124, 237, 622, 15, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8783, 257, 146, 3, 31, "Input"],
+Cell[8932, 262, 600, 15, 31, "Output"]
+}, Open  ]],
+Cell[9547, 280, 103, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[9675, 285, 300, 8, 31, "Input"],
+Cell[9978, 295, 615, 15, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10630, 315, 574, 12, 52, "Input"],
+Cell[11207, 329, 723, 17, 31, "Output"]
+}, Open  ]],
+Cell[11945, 349, 535, 14, 52, "Input"],
+Cell[CellGroupData[{
+Cell[12505, 367, 531, 15, 75, "Input"],
+Cell[13039, 384, 165, 4, 31, "Output"]
+}, Open  ]],
+Cell[13219, 391, 291, 7, 46, "Input"],
+Cell[CellGroupData[{
+Cell[13535, 402, 128, 2, 31, "Input"],
+Cell[13666, 406, 104, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13807, 412, 197, 4, 46, "Input"],
+Cell[14007, 418, 142, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14186, 425, 652, 12, 52, "Input"],
+Cell[14841, 439, 651, 14, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15529, 458, 420, 9, 52, "Input"],
+Cell[15952, 469, 720, 17, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

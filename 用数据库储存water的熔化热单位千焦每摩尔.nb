@@ -1,0 +1,437 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     14634,        428]
+NotebookOptionsPosition[     12726,        355]
+NotebookOutlinePosition[     13082,        371]
+CellTagsIndexPosition[     13039,        368]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"<<", "DatabaseLink`DatabaseExamples`"}], "\[IndentingNewLine]", 
+ RowBox[{"DatabaseExamplesBuild", "[", " ", "]"}]}], "Input",
+ CellChangeTimes->{{3.653283052750885*^9, 3.653283053562086*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"conn", "=", 
+  RowBox[{"OpenSQLConnection", "[", "\"\<demo\>\"", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"SQLConnection", "[", 
+  RowBox[{"\<\"demo\"\>", ",", "6", ",", "\<\"Open\"\>", ",", 
+   RowBox[{"\<\"TransactionIsolationLevel\"\>", 
+    "\[Rule]", "\<\"ReadCommitted\"\>"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.6532830952921596`*^9, 3.653284568962328*^9, 
+  3.653284756725054*^9, 3.65328635470265*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SQLTableNames", "[", "conn", "]"}]], "Input",
+ CellChangeTimes->{{3.6532872299269824`*^9, 3.653287232398986*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"CHEMICAL_FUSION_HEAT\"\>", 
+   ",", "\<\"HEAT_CAPACITY_CONST_PRESSURE\"\>", ",", "\<\"SAMPLETABLE1\"\>"}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.653283097351363*^9, 3.653284571395932*^9, 
+  3.653284760781061*^9, 3.6532852319174824`*^9, 3.653285358738103*^9, 
+  3.6532870861083307`*^9, 3.6532872334901876`*^9, 3.6532878910453386`*^9, 
+  3.6532880116803503`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SQLSelect", "[", 
+  RowBox[{"conn", ",", "\"\<CHEMICALFUSIONHEAT\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.6532833796786556`*^9, 3.6532833991474895`*^9}, {
+  3.6532845822067513`*^9, 3.6532845841567545`*^9}, {3.653285413291399*^9, 
+  3.6532854215126133`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\<\"Water\"\>", ",", "6.008`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6532833997246904`*^9, 3.6532834864616423`*^9, 3.6532838044453993`*^9, {
+   3.65328457582634*^9, 3.653284586028758*^9}, 3.653284700122555*^9, 
+   3.6532854221834145`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SQLInsert", "[", " ", 
+  RowBox[{"conn", ",", "\"\<SAMPLETABLE1\>\"", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\"\<ENTRY\>\"", ",", "\"\<VALUE\>\"", ",", "\"\<NAME\>\""}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "8.4", ",", "\"\<Day6\>\""}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6532834719068165`*^9, 3.6532834740596204`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.6532834751360226`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SQLUpdate", "[", "  ", 
+  RowBox[{"conn", ",", "\"\<SAMPLETABLE1\>\"", ",", " ", 
+   RowBox[{"{", "\"\<VALUE\>\"", "}"}], ",", " ", 
+   RowBox[{"{", "7", "}"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SQLColumn", "[", "\"\<VALUE\>\"", "]"}], "<", "8"}], "&&", 
+    RowBox[{
+     RowBox[{"SQLColumn", "[", "\"\<ENTRY\>\"", "]"}], "<", "4"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6532835475357494`*^9, 3.653283587269019*^9}}],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.653283590264224*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SQLSelect", "[", 
+  RowBox[{"conn", ",", "\"\<SAMPLETABLE1\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SQLSelect", "[", 
+  RowBox[{
+  "conn", ",", "\"\<CHEMICAL_FUSION_HEAT\>\"", ",", "\"\<Value\>\"", ",", 
+   RowBox[{
+    RowBox[{"SQLColumn", "[", "\"\<SubstanceName\>\"", "]"}], "\[Equal]", 
+    "\"\<Ethane\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.653283726975663*^9, 3.653283728488866*^9}, 
+   3.653286348540639*^9, {3.6532863796810923`*^9, 3.6532863824110975`*^9}, {
+   3.6532866401567492`*^9, 3.6532867067496653`*^9}, {3.653287106497566*^9, 
+   3.6532871623944635`*^9}, {3.6532879053817635`*^9, 3.65328793762702*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "7.`", ",", "\<\"Day1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "7.`", ",", "\<\"Day2\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.653283601159443*^9, 3.6532837300176687`*^9, 3.6532838109038105`*^9, 
+   3.6532847679570737`*^9, {3.653286349726241*^9, 3.6532863836278996`*^9}, 
+   3.653286641576352*^9, 3.6532867145340796`*^9, 3.653287164110467*^9, {
+   3.653287927814603*^9, 3.6532879382822213`*^9}, 3.6532880203391647`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "278.61`", "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.653283601159443*^9, 3.6532837300176687`*^9, 3.6532838109038105`*^9, 
+   3.6532847679570737`*^9, {3.653286349726241*^9, 3.6532863836278996`*^9}, 
+   3.653286641576352*^9, 3.6532867145340796`*^9, 3.653287164110467*^9, {
+   3.653287927814603*^9, 3.6532879382822213`*^9}, 3.653288020354765*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SQLDelete", "[", "  ", 
+  RowBox[{"conn", ",", "\"\<SAMPLETABLE1\>\"", ",", 
+   RowBox[{
+    RowBox[{"SQLColumn", "[", "\"\<ENTRY\>\"", "]"}], ">", "2"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.653283789843774*^9, 3.653283795631384*^9}, {
+  3.6532846905233383`*^9, 3.6532846928633423`*^9}}],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.6532837980337877`*^9, 3.653284694501345*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloseSQLConnection", "[", "conn", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.6532838370134554`*^9, 3.65328474895624*^9, 
+  3.6532854792095137`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SQLCreateTable", "[", 
+   RowBox[{
+   "conn", ",", " ", "\"\<Heat_Capacity_Const_Pressure\>\"", ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"SQLColumn", "[", 
+       RowBox[{"\"\<SubstanceName\>\"", ",", 
+        RowBox[{"\"\<DataTypeName\>\"", "\[Rule]", "\"\<VARCHAR\>\""}]}], 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"SQLColumn", "[", 
+       RowBox[{"\"\<Value\>\"", ",", 
+        RowBox[{"\"\<DataTypeName\>\"", "\[Rule]", "\"\<DOUBLE\>\""}]}], 
+       "]"}]}], "\[IndentingNewLine]", "}"}]}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SQLInsert", "[", 
+   RowBox[{"conn", ",", " ", "\"\<Heat_Capacity_Const_Pressure\>\"", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<SubstanceName\>\"", ",", " ", "\"\<VALUE\>\""}], "}"}], ",",
+     " ", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<Water\>\"", ",", "75.29"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<CarbonDioxide\>\"", ",", "44.22"}], "}"}]}], "}"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.653284893896095*^9, 3.6532849182165375`*^9}, {
+  3.6532850106134977`*^9, 3.6532850318939342`*^9}, {3.6532850695056005`*^9, 
+  3.653285171558178*^9}, {3.653285203867834*^9, 3.6532852064262385`*^9}, {
+  3.653285269217148*^9, 3.653285295743594*^9}, {3.653285334307661*^9, 
+  3.6532853436520777`*^9}, {3.653286764422967*^9, 3.6532867859978046`*^9}, {
+  3.653286872780757*^9, 3.6532869400288744`*^9}, {3.6532870542998743`*^9, 
+  3.6532870767327137`*^9}, {3.653287881934922*^9, 3.653287884711727*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChemicalData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<Property\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.653285447642659*^9, 3.653285459841881*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ChemicalData", "::", "notprop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\\"\\\\\\\"Property\\\\\\\"\\\"\\)\
+\[NoBreak] \:4e0d\:662f \[NoBreak]\\!\\(ChemicalData\\)\[NoBreak] \
+\:7684\:4e00\:4e2a\:5df2\:77e5\:5c5e\:6027. \:8bf7\:4f7f\:7528 \
+\[NoBreak]\\!\\(ChemicalData\\)\[NoBreak][\\\"Properties\\\"] \:67e5\:770b\
+\:5c5e\:6027\:5217\:8868. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ChemicalData\\\", ButtonNote -> \
+\\\"ChemicalData::notprop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.653285475293907*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChemicalData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<Density\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.653285485075124*^9, 3.6532854954023423`*^9}, {
+  3.6532875442747326`*^9, 3.653287546427537*^9}}],
+
+Cell[BoxData["1000.`"], "Output",
+ CellChangeTimes->{3.6532875469423375`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.653285499411549*^9, 3.6532854997547503`*^9}, 
+   3.6532875515287457`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChemicalData", "[", 
+  RowBox[{"\"\<Water\>\"", ",", "\"\<VaporizationHeat\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.653285503904357*^9, 3.653285516493579*^9}}],
+
+Cell[BoxData["40.2`3."], "Output",
+ CellChangeTimes->{3.653285518162782*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SQLDropTable", "[", 
+  RowBox[{"conn", ",", "\"\<HEAT_CAPACITY_CONST_PRESSURE\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6532875749287868`*^9, 3.6532875975800266`*^9}, {
+  3.6532878724033055`*^9, 3.6532878762097125`*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.653287598328828*^9, 3.6532878774109144`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SQLCreateTable", "[", 
+   RowBox[{
+   "conn", ",", " ", "\"\<Chemical_Fusion_Heat\>\"", ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"SQLColumn", "[", 
+       RowBox[{"\"\<SubstanceName\>\"", ",", 
+        RowBox[{"\"\<DataTypeName\>\"", "\[Rule]", "\"\<VARCHAR\>\""}]}], 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"SQLColumn", "[", 
+       RowBox[{"\"\<Value\>\"", ",", 
+        RowBox[{"\"\<DataTypeName\>\"", "\[Rule]", "\"\<DOUBLE\>\""}]}], 
+       "]"}]}], "\[IndentingNewLine]", "}"}]}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SQLInsert", "[", 
+   RowBox[{"conn", ",", " ", "\"\<Chemical_Fusion_Heat\>\"", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<SubstanceName\>\"", ",", " ", "\"\<VALUE\>\""}], "}"}], ",",
+     " ", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<Water\>\"", ",", "6.008"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Ethane\>\"", ",", "278.61"}], "}"}]}], "}"}]}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6532876209332676`*^9, 3.6532876496445165`*^9}, {
+  3.6532878395496483`*^9, 3.6532878404544497`*^9}, {3.653287987874708*^9, 
+  3.6532880061423407`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"JDBC", "::", "error"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\\"Table already exists: \
+CHEMICAL_FUSION_HEAT in statement [CREATE TABLE Chemical_Fusion_Heat]\\\"\\)\
+\[NoBreak] \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:DatabaseLink/ref/JDBC\\\", \
+ButtonNote -> \\\"DatabaseLink`JDBC::error\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.653288008061144*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChemicalData", "[", 
+  RowBox[{"\"\<Ethane\>\"", ",", "\"\<SpaceFillingMoleculePlot\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6532876691757507`*^9, 3.653287686912982*^9}, {
+  3.6532877366926694`*^9, 3.653287770765128*^9}, {3.6532878014855814`*^9, 
+  3.653287814792404*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {GrayLevel[0.4], SphereBox[{69.0796, 13.0427, -29.2677}, 170.]}, 
+   {GrayLevel[0.4], SphereBox[{-69.0791, -13.0405, 29.2649}, 170.]}, 
+   {RGBColor[0.65, 0.7, 0.7], SphereBox[{145.535, -41.4271, 30.5289}, 120.]}, 
+   {RGBColor[0.65, 0.7, 0.7], SphereBox[{72.0051, -22.6386, -134.654}, 120.]}, 
+   {RGBColor[0.65, 0.7, 0.7], SphereBox[{90.662, 122.192, -26.4585}, 120.]}, 
+   {RGBColor[0.65, 0.7, 0.7], SphereBox[{-145.617, 41.3883, -30.4616}, 120.]}, 
+   {RGBColor[0.65, 0.7, 0.7], SphereBox[{-72.0212, 22.6945, 134.636}, 120.]}, 
+   {RGBColor[0.65, 0.7, 0.7], SphereBox[{-90.5644, -122.211, 26.412}, 120.]}},
+  Boxed->False,
+  ImageSize->139.30525886879303`,
+  Lighting->"Neutral",
+  SphericalRegion->True,
+  ViewPoint->{0.5022521776073839, -1.7185870131287884`, -2.8712717440872275`},
+  ViewVertical->{0.3034263669997443, -0.2991936142833953, 
+   0.9521408261631092}]], "Output",
+ CellChangeTimes->{
+  3.6532876878333836`*^9, {3.653287743291481*^9, 3.653287816867208*^9}}]
+}, Open  ]]
+},
+WindowSize->{707, 505},
+WindowMargins->{{Automatic, 202}, {-5, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 217, 3, 52, "Input"],
+Cell[CellGroupData[{
+Cell[799, 27, 107, 2, 31, "Input"],
+Cell[909, 31, 331, 6, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1277, 42, 137, 2, 31, "Input"],
+Cell[1417, 46, 408, 8, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1862, 59, 287, 5, 31, "Input"],
+Cell[2152, 66, 308, 7, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2497, 78, 378, 8, 52, "Input"],
+Cell[2878, 88, 72, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2987, 94, 461, 11, 52, "Input"],
+Cell[3451, 107, 70, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3558, 113, 662, 12, 72, "Input"],
+Cell[4223, 127, 534, 11, 31, "Output"],
+Cell[4760, 140, 394, 7, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5191, 152, 319, 7, 31, "Input"],
+Cell[5513, 161, 94, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5644, 167, 74, 1, 31, "Input"],
+Cell[5721, 170, 137, 3, 31, "Output"]
+}, Open  ]],
+Cell[5873, 176, 1622, 35, 172, "Input"],
+Cell[CellGroupData[{
+Cell[7520, 215, 181, 3, 31, "Input"],
+Cell[7704, 220, 675, 13, 45, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8416, 238, 233, 4, 31, "Input"],
+Cell[8652, 244, 77, 1, 31, "Output"]
+}, Open  ]],
+Cell[8744, 248, 122, 2, 31, "Input"],
+Cell[CellGroupData[{
+Cell[8891, 254, 189, 3, 31, "Input"],
+Cell[9083, 259, 76, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9196, 265, 252, 5, 31, "Input"],
+Cell[9451, 272, 94, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9582, 278, 1255, 31, 152, "Input"],
+Cell[10840, 311, 516, 10, 45, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11393, 326, 305, 6, 31, "Input"],
+Cell[11701, 334, 1009, 18, 154, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
