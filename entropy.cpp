@@ -1,4 +1,21 @@
 // 计算常见物质化学反应标准状态298.15K下焓变
+// How to compile and use this code
+// mkdir -p build && g++ entropy.cpp -o build/entropy
+// cp standard_entropy_data.txt build/ && cd build
+// ./entropy
+// [feng@bcm build]$ ./entropy
+// Input the number of reactants
+// 2
+// Input the name of reactants, their corresponding coefficients in the equation, and use the space to separate them
+// H2 2
+// O2 1
+// Input the number of products
+// 1
+// Input the name of products, their corresponding coefficients in the equation, and use the space to separate them
+// H2O 2
+// the reaction relation is:
+// 2H2+O2==2H2O
+// The entropy change of the process is: -326.7
 
 #include<iostream>
 #include<fstream>
@@ -31,27 +48,27 @@ int main(){
     cout<<my_substance[i].name<<':'<<my_substance[i].MolarEntropy<<endl;  
   */
   while(1){
-   // cout<<"Input the number of reactants\n";
+    cout<<"Input the number of reactants\n";
     int tmp1;
     cin>>tmp1; 
-   // cout<<"Input the name of reactants, their corresponding coefficients in the equation, and use the space to separate them\n";
+    cout<<"Input the name of reactants, their corresponding coefficients in the equation, and use the space to separate them\n";
     string* my_string1=new string[tmp1];
     double* my_coefficient1=new double[tmp1];
     for(int i=0;i<tmp1;i++){
         cin>>my_string1[i];
         cin>>my_coefficient1[i];
     }  
-   // cout<<"Input the number of products\n";
+    cout<<"Input the number of products\n";
     int tmp2;
     cin>>tmp2; 
-   // cout<<"Input the name of products, their corresponding coefficients in the equation, and use the space to separate them\n";
+    cout<<"Input the name of products, their corresponding coefficients in the equation, and use the space to separate them\n";
     string* my_string2=new string[tmp2];
     double* my_coefficient2=new double[tmp2];
     for(int i=0;i<tmp2;i++){
         cin>>my_string2[i];
         cin>>my_coefficient2[i];
     }  
-   // cout<<"the reaction relation is:\n";
+    cout<<"the reaction relation is:\n";
     for(int i=0;i<tmp1;i++){
        if(my_coefficient1[i]!=1)
           cout<<my_coefficient1[i];
