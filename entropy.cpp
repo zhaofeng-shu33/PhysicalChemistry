@@ -1,3 +1,5 @@
+// 计算常见物质化学反应标准状态298.15K下焓变
+
 #include<iostream>
 #include<fstream>
 #include<cmath>
@@ -6,6 +8,7 @@
 #include<cstring>
 #include<cctype>
 using namespace std;
+
 int total_substance=0;
 struct substance{
   string name;
@@ -17,9 +20,9 @@ double entropy(string name){
    for(int i=0;i<total_substance;i++)
        if(name==my_substance[i].name)
           return my_substance[i].MolarEntropy;
-}  
+}
 int main(){
-  ifstream fin("standard entropy data.txt");
+  ifstream fin("standard_entropy_data.txt");
   while(!fin.eof()){
     fin>>my_substance[total_substance].name;
     fin>>my_substance[total_substance++].MolarEntropy;
@@ -31,7 +34,7 @@ int main(){
    // cout<<"Input the number of reactants\n";
     int tmp1;
     cin>>tmp1; 
-   // cout<<"Input the name of reactants, their corresponding coefficients in the equation, and use the space to seperate them\n";
+   // cout<<"Input the name of reactants, their corresponding coefficients in the equation, and use the space to separate them\n";
     string* my_string1=new string[tmp1];
     double* my_coefficient1=new double[tmp1];
     for(int i=0;i<tmp1;i++){
@@ -41,7 +44,7 @@ int main(){
    // cout<<"Input the number of products\n";
     int tmp2;
     cin>>tmp2; 
-   // cout<<"Input the name of products, their corresponding coefficients in the equation, and use the space to seperate them\n";
+   // cout<<"Input the name of products, their corresponding coefficients in the equation, and use the space to separate them\n";
     string* my_string2=new string[tmp2];
     double* my_coefficient2=new double[tmp2];
     for(int i=0;i<tmp2;i++){
